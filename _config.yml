@@ -1,1 +1,48 @@
-theme: jekyll-theme-merlot
+title: hi 👀
+description: no problem
+author: chaise of à côté de la fenêtre
+github: https://github.com/
+about: just chillin. whatcha doin ? 👀
+
+enableTags: true
+tagarray: []
+
+collections:
+  project:
+    output: true
+    oermalink: /project/:path/
+
+social:
+    - icon: fa-twitter
+      link: "#"
+    - icon: fa-github
+      link: "https://github.com/amphisbene"
+
+share:
+  twitter_username: donotexistathemomentsorrypasdezo
+  fb_appid: 1749788565247320
+
+urls:
+    - text: whoami 
+      url: /whoami/
+    - text: projects
+      url: /projects/
+    - text: xml feed
+      url: /feed.xml
+
+url: "https://amphisbene.github.io"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']
