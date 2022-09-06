@@ -1,48 +1,102 @@
-title: hi 👀
-description: no problem
-author: chaise of à côté de la fenêtre
-github: https://github.com/
-about: just chillin. whatcha doin ? 👀
+#
+# This file contains configuration flags to customize your site
+#
 
-enableTags: true
-tagarray: []
+# Name of your site (displayed in the header)
+name: Amphisbene
 
-collections:
-  project:
-    output: true
-    oermalink: /project/:path/
+# Name of the author
+author: Amphisbene
 
-social:
-    - icon: fa-twitter
-      link: "#"
-    - icon: fa-github
-      link: "https://github.com/amphisbene"
+# Short bio or description (displayed in the header)
+description: Talking about stuff
 
-share:
-  twitter_username: donotexistathemomentsorrypasdezo
-  fb_appid: 1749788565247320
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: /images/reverie.png
 
-urls:
-    - text: whoami 
-      url: /whoami/
-    - text: projects
-      url: /projects/
-    - text: xml feed
-      url: /feed.xml
+#
+# Flags below are optional
+#
 
-url: "https://amphisbene.github.io"
-baseurl: ""
-paginate: 20
-per_page: 20
-paginate_path: "/page/:num/"
-markdown: kramdown
-gems:
+# Includes an icon in the footer for each username you enter
+footer-links:
+  dribbble:
+  email: amphisbene@pm.me
+  facebook:
+  flickr:
+  github: amphisbene
+  instagram:
+  linkedin: 
+  pinterest:
+  rss:
+  twitter: francebleudroma
+  stackoverflow: 
+  youtube:
+  googleplus:
+  playconsole:
+
+
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+disqus: 
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics:
+
+# For newer "GA4" analytics, use the following instead of the "UA" entry above
+#google_analytics_ga4: G-GABC1DEFG
+
+# Your website URL (e.g. http://amitmerchant1990.github.io or http://www.amitmerchant.com)
+# Used for Sitemap.xml and your RSS feed
+url: http://amphisbene.github.io
+enforce_ssl: https://amphisbene.github.io
+
+# If you're hosting your site at a Project repository on GitHub pages
+# (http://yourusername.github.io/repository-name)
+# and NOT your User repository (http://yourusername.github.io)
+# then add in the baseurl here, like this: "/repository-name"
+baseurl: "/reverie"
+
+#
+# !! You don't need to change any of the configuration flags below !!
+#
+
+permalink: /:title/
+
+# The release of Jekyll Now that you're using
+version: v1.2.0
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
+# Use the following plug-ins
+plugins:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-gist
 
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: all
-  ignore:
-    envs: ['development']
+include: ['_pages']
+
+paginate: 6
+paginate_path: /page:num/
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
