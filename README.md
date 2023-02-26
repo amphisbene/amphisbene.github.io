@@ -3,7 +3,7 @@
 ## Add a new post
 
 ```bash
-cp _posts/2022-09-06-welcome.md _posts/$(echo -n $(date +%Y-%m-%d)_title.md)
+cp _posts/2022-09-06-welcome.md _posts/$(echo -n $(date +%Y-%m-%d)-title.md)
 ```
 
 ## Test this blog locally
